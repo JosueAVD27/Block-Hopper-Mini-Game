@@ -11,9 +11,17 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.btn-reinicio {
+  margin-left: 30% !important;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
 canvas {
   border: rgb(0, 145, 255) 5px double !important;
-  background-color: #87ceeb;
+  background-image: url(../assets/img/FondoJuego.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 body {
@@ -2629,6 +2637,8 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .form-check-input[type=checkbox] {
