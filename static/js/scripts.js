@@ -1,5 +1,5 @@
-var canvasWidth = 600;
-var canvasHeight = 400;
+var canvasWidth = 900;
+var canvasHeight = 500;
 
 var player;
 var playerYPosition = 200;
@@ -40,7 +40,7 @@ function createPlayer(width, height, x) {
     this.height = height;
     this.x = x;
     this.y = playerYPosition;
-    
+
     this.draw = function() {
         ctx = gameCanvas.context;
         ctx.fillStyle = "green";
@@ -49,7 +49,7 @@ function createPlayer(width, height, x) {
     this.makeFall = function() {
         if (!isJumping) {
             this.y += fallSpeed;
-            fallSpeed += 0.1;
+            fallSpeed += 0.3;
             this.stopPlayer();
         }
     }
@@ -62,7 +62,7 @@ function createPlayer(width, height, x) {
     this.jump = function() {
         if (isJumping) {
             this.y -= jumpSpeed;
-            jumpSpeed += 0.3;
+            jumpSpeed += 0.9;
         }
     }
 }
@@ -121,7 +121,7 @@ function createScoreLabel(x, y) {
     this.draw = function() {
         ctx = gameCanvas.context;
         ctx.font = "25px Marker Felt";
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "white";
         ctx.fillText(this.text, this.x, this.y);
     }
 }
@@ -156,6 +156,6 @@ function resetJump() {
 document.body.onkeyup = function(e) {
     if (e.keyCode == 32) {
         isJumping = true;
-        setTimeout(function() { resetJump(); }, 1000);
+        setTimeout(function() { resetJump(); }, 630);
     }
 }
