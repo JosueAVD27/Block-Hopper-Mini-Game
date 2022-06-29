@@ -1,5 +1,5 @@
 #Importamos las librerias de flask
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, render_template
 #Intanciar la aplicacion
 app = Flask(__name__)
 
